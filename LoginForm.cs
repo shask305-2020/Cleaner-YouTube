@@ -48,7 +48,7 @@ namespace Химчистка
             if (table.Rows.Count == 1)
             {
                 MessageBox.Show("Добро пожаловать, " + realName);
-                MainForm mainForm = new MainForm();
+                MainForm mainForm = new MainForm(realName);
                 mainForm.Show();
                 this.Hide();
             }
@@ -59,6 +59,11 @@ namespace Химчистка
                 txtPass.Text = "";
                 txtLogin.Focus();
             }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
